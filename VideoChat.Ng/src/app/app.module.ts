@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RoomCreateComponent } from './room/room-create.component';
 import { RoomComponent } from './room/room.component';
 import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomComponent
+    RoomComponent,
+    RoomCreateComponent
   ],
   imports: [
     BrowserModule,
