@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VideoChat.Data;
+using MediatR;
 
 namespace VideoChat.Web
 {
@@ -36,6 +37,7 @@ namespace VideoChat.Web
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "VideoChat.Web", Version = "v1" });
             });
             services.AddTransient<IDatabaseInitializer, DatabaseInitializer>();
+            services.AddMediatR(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
