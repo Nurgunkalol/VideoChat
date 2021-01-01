@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace VideoChat.Data
+namespace VideoChat.EF
 {
-    public interface IEntityRepository<TEntity> where TEntity: class
+    public interface IEntityRepository<TEntity> where TEntity : class
     {
         IQueryable<TEntity> GetEntities();
         void Add(TEntity entity);

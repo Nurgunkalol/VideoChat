@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using System;
-using VideoChat.Core.Entities;
+using VideoChat.Entities;
 
 namespace VideoChat.Data
 {

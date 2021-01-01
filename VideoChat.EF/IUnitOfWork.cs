@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace VideoChat.Data
+namespace VideoChat.EF
 {
     public interface IUnitOfWork
     {

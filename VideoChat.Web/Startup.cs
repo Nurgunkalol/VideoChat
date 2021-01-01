@@ -14,6 +14,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using VideoChat.Data;
 using MediatR;
+using VideoChat.EF;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using VideoChat.Core.Requests;
 
 namespace VideoChat.Web
 {
@@ -36,8 +39,15 @@ namespace VideoChat.Web
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "VideoChat.Web", Version = "v1" });
             });
-            services.AddTransient<IDatabaseInitializer, DatabaseInitializer>();
             services.AddMediatR(typeof(Startup));
+            services.AddTransient<IDatabaseInitializer, DatabaseInitializer>();
+            services.AddScoped<IDatabaseFactory, DatabaseFactory>((provider) => {
+                var connectionString = Configuration.GetConnectionString("DefaultConnection");
+                return new DatabaseFactory(connectionString);
+            });
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IRequestHandler<CreateRoom, string>, CreateRoomHandler>();
+            services.TryAddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

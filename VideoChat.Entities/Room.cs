@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using VideoChat.Core.Enums;
 
-namespace VideoChat.Core.Entities
+namespace VideoChat.Entities
 {
     public class Room
     {

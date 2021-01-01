@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoChat.Web", "VideoChat.Web\VideoChat.Web.csproj", "{9E4683A0-B42B-4A4B-9899-5B54F9A6EC7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoChat.Web", "VideoChat.Web\VideoChat.Web.csproj", "{9E4683A0-B42B-4A4B-9899-5B54F9A6EC7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoChat.Core", "VideoChat.Core\VideoChat.Core.csproj", "{BF4E03F5-77F8-4125-A23A-66B02321035C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoChat.Core", "VideoChat.Core\VideoChat.Core.csproj", "{BF4E03F5-77F8-4125-A23A-66B02321035C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoChat.Data", "VideoChat.Data\VideoChat.Data.csproj", "{B77F7336-911D-4A11-A5C1-D475EF053BCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoChat.Data", "VideoChat.Data\VideoChat.Data.csproj", "{B77F7336-911D-4A11-A5C1-D475EF053BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoChat.Entities", "VideoChat.Entities\VideoChat.Entities.csproj", "{C7AF6733-3C7F-4186-96DB-F5E48237E953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoChat.EF", "VideoChat.EF\VideoChat.EF.csproj", "{07515AE6-C28F-4D93-A318-E576B209DE6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B77F7336-911D-4A11-A5C1-D475EF053BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B77F7336-911D-4A11-A5C1-D475EF053BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B77F7336-911D-4A11-A5C1-D475EF053BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7AF6733-3C7F-4186-96DB-F5E48237E953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7AF6733-3C7F-4186-96DB-F5E48237E953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7AF6733-3C7F-4186-96DB-F5E48237E953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7AF6733-3C7F-4186-96DB-F5E48237E953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07515AE6-C28F-4D93-A318-E576B209DE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07515AE6-C28F-4D93-A318-E576B209DE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07515AE6-C28F-4D93-A318-E576B209DE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07515AE6-C28F-4D93-A318-E576B209DE6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\VideoChat.Core\VideoChat.Core.csproj" />
+    <ProjectReference Include="..\VideoChat.Entities\VideoChat.Entities.csproj" />
+    <ProjectReference Include="..\VideoChat.EF\VideoChat.EF.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,6 +18,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VideoChat.Core\VideoChat.Core.csproj" />
+    <ProjectReference Include="..\VideoChat.Entities\VideoChat.Entities.csproj" />
     <ProjectReference Include="..\VideoChat.Data\VideoChat.Data.csproj" />
   </ItemGroup>
 
