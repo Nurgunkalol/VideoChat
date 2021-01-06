@@ -8,5 +8,9 @@ namespace VideoChat.Web.Hubs
 {
     public class WebRTCHub : Hub
     {
+        public string GetConnectionId()
+        {
+            return Context.ConnectionId;
+        }
     }
 }

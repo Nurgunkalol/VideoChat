@@ -45,6 +45,7 @@ namespace VideoChat.Web
                 var connectionString = Configuration.GetConnectionString("DefaultConnection");
                 return new DatabaseFactory(connectionString);
             });
+            services.AddCors();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IRequestHandler<CreateRoom, string>, CreateRoomHandler>();
             services.TryAddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
@@ -60,7 +61,13 @@ namespace VideoChat.Web
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VideoChat.Web v1"));
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins(Configuration["Cors:Origin"])
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("Content-Disposition");
+            });
 
             app.UseRouting();
 

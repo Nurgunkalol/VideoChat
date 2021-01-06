@@ -18,7 +18,7 @@ namespace VideoChat.Web.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("CreateRoom")]
+        [HttpPost("CreateRoom")]
         public async Task<string> CreateRoomAsync()
         {
             return await _mediator.Send(new CreateRoom());
